@@ -14,14 +14,16 @@
  */
 
 #include "main.h"
+/* Had to change demo.c to demo.h and include it here to get it working without errors @alt_bier */
+#include "demo.h"
 
 volatile bool run_program = false;
 
 /* Can be overridden by user program */
-void __attribute__((weak)) setup(void) {}
+//void __attribute__((weak)) setup(void) {} /* Had to comment this out due to errors @alt_bier */
 
 /* Can be overridden by user program */
-void __attribute__((weak)) loop(void) {}
+//void __attribute__((weak)) loop(void) {}  /* Had to comment this out due to errors @alt_bier */
 
 void main_loop(void)
 {

@@ -16,9 +16,13 @@
 #include <font_ascii.h>
 #include "main.h"
 
-#define USER_DATA_SIZE 128
+#define USER_DATA_SIZE 56
 unsigned char user_data[USER_DATA_SIZE];
-unsigned char text_data[] = "Hello, World!";
+unsigned char text_data[] = " Hello, World! ";
+void setup(void)
+{
+        // This code is invoked once to initialize the demo...
+}
 
 void move_text_frame()
 {
@@ -60,7 +64,7 @@ void move_text_frame()
 				else
 					brightness = 0;
 			}
-//			display_buffer[row][(col * COL_SIZE) + 0] = brightness;
+			display_buffer[row][(col * COL_SIZE) + 0] = brightness;
 			display_buffer[row][(col * COL_SIZE) + 1] = brightness;
 			display_buffer[row][(col * COL_SIZE) + 2] = brightness;
 		}
